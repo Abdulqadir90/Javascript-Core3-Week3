@@ -72,15 +72,25 @@ let hogwarts = [
   },
 ];
 
-const {firstName, lastName, house, pet, occupation} = hogwarts;
+const { firstName, lastName, house, pet, occupation } = hogwarts;
 
-function belongTooGryffindor(el) {
-    el.forEach((name) => {
-        if(name.house === "Gryffindor") {
-            console.log(name.firstName, name.lastName);
+// function belongTooGryffindor(el) {
+//     el.forEach((name) => {
+//         if(name.house === "Gryffindor") {
+//             console.log(name.firstName, name.lastName);
+//     }
+
+// })
+// };
+
+// belongTooGryffindor(hogwarts);
+
+function teacherPets(el) {
+  el.forEach((name) => {
+    if (name.occupation === "Teacher" && name.pet != null) {
+      console.log(name.firstName, name.lastName);
     }
-    
-})
-};
+  });
+}
 
-belongTooGryffindor(hogwarts);
+teacherPets(hogwarts);
