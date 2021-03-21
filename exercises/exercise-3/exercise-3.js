@@ -7,3 +7,13 @@
      { itemName: "Hash Brown", quantity: 4, unitPrice: 0.40}
  ]
  
+ let total = 0;
+ order.map((el) => {
+     const {itemName, quantity, unitPrice} = el;
+     console.log(`${itemName}   ${quantity}   ${unitPrice}`);
+
+    total = total + unitPrice;
+ })
+ 
+ console.log(`total: ${total}`);
+
